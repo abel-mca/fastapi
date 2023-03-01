@@ -1,0 +1,8 @@
+from fastapi import FastAPI
+app=FastAPI()
+@app.get("/hello")
+def read_root():
+	data = "hello","man","lmao",346
+	return {"hello":data,"username": "johndoe", "email": "johndoe@example.com"}
+#uvicorn filename:app --reload
+#cd Desktop/Internship
